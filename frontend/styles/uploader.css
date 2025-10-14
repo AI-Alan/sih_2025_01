@@ -6,12 +6,17 @@
 }
 
 .uploader .drop {
-    border: 2px dashed #e6eefc;
+    border: 2px dashed var(--accent-20);
     padding: 24px;
     border-radius: 8px;
     text-align: center;
     cursor: pointer;
-    background: #fcfeff;
+    background: var(--card);
+}
+
+.uploader .drop.drag {
+    border-color: var(--accent);
+    background: var(--accent-10);
 }
 
 .btn {
@@ -26,9 +31,19 @@
     border: none;
 }
 
+.btn:hover {
+    filter: brightness(0.95);
+}
+
 .btn.secondary {
-    background: #e6eefc;
+    background: var(--accent-10);
     color: var(--accent);
     font-weight: 600;
     border: transparent;
+}
+
+.btn:disabled,
+.btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
